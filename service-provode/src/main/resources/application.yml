@@ -1,0 +1,9 @@
+server:
+  port: 1112
+eureka:
+  instance:
+    appname: service-provide
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
