@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: zull
+zull:
+  routes:
+  #自定义
+    service-1:
+    #映射路径
+      path: /user/get
+      #服务名称，客户端访问前缀为此+path
+      serviceId: provide
+    service-2:
+      path: /get
+      serviceId: consumer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+server:
+  port: 8888
+management:
+  security:
+    enabled: false

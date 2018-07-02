@@ -1,8 +1,18 @@
+eureka:
+    instance:
+        statusPageUrlPath: /info
+        healthCheckUrlPath: /health
+        prefer-ip-address: true
+        leaseRenewalIntervalInSeconds: 5
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:1111/eureka/
+spring:
+  application:
+    name: consumer
 server:
   port: 1113
-eureka:
-  instance:
-    appname: service-consumer
-  client:
-      serviceUrl:
-        defaultZone: http://localhost:1111/eureka/
+#springboot端点权限控制
+management:
+  security:
+    enabled: false
